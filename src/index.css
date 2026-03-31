@@ -1,0 +1,49 @@
+@import "tailwindcss";
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&family=Cormorant+Garamond:ital,wght@0,400;0,600;0,700;1,400&display=swap');
+
+@theme {
+  --font-sans: "Montserrat", ui-sans-serif, system-ui, sans-serif;
+  --font-serif: "Cormorant Garamond", serif;
+  
+  --color-navy-dark: #020617;
+  --color-navy-deep: #0f172a;
+  --color-gold-bright: #fbbf24;
+  --color-gold-muted: #d97706;
+  --color-gold-luxe: #c5a059;
+}
+
+@layer base {
+  body {
+    @apply font-sans text-white bg-navy-dark antialiased;
+  }
+  h1, h2, h3, h4 {
+    @apply font-serif font-semibold tracking-tight;
+  }
+}
+
+.glass-nav {
+  @apply bg-navy-dark/90 backdrop-blur-xl border-b border-white/5;
+}
+
+.hero-gradient {
+  background: radial-gradient(circle at center, rgba(15, 23, 42, 0.4) 0%, rgba(2, 6, 23, 0.95) 100%);
+}
+
+.maritime-pattern {
+  background-image: linear-gradient(rgba(2, 6, 23, 0.92), rgba(2, 6, 23, 0.92)), url("https://images.unsplash.com/photo-1524522173746-f628baad3644?auto=format&fit=crop&q=80&w=2000");
+  background-attachment: fixed;
+  background-size: cover;
+  background-position: center;
+}
+
+.luxe-border {
+  @apply border border-gold-luxe/20;
+}
+
+.gold-text-gradient {
+  @apply bg-clip-text text-transparent bg-gradient-to-r from-gold-luxe via-gold-bright to-gold-luxe;
+}
+
+.section-divider {
+  @apply h-px w-full bg-gradient-to-r from-transparent via-gold-luxe/30 to-transparent;
+}
